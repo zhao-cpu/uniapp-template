@@ -133,6 +133,9 @@ devDependencies:
   unocss:
     specifier: ^0.58.3
     version: 0.58.3(postcss@8.4.33)(vite@4.0.3)
+  unocss-preset-weapp:
+    specifier: ^0.58.0
+    version: 0.58.0
   unplugin-auto-import:
     specifier: ^0.17.3
     version: 0.17.3
@@ -3082,6 +3085,12 @@ packages:
       '@jridgewell/resolve-uri': 3.1.1
       '@jridgewell/sourcemap-codec': 1.4.15
 
+  /@meoc/utils@0.2.8:
+    resolution: {integrity: sha512-SogV9QQpK05CVO3Gz071fRFH/PbbXxCP566VYOs/ux62RTuTbfAVeT8jkiYfzBpg+ImqpKkkK6o6tcbGM0rESQ==}
+    dependencies:
+      dayjs: 1.11.10
+    dev: true
+
   /@nodelib/fs.scandir@2.1.5:
     resolution: {integrity: sha512-vq24Bq3ym5HEQm2NKCr3yXDwjc7vTsEThRDnkp2DK9p1uqLR+DHurm/NOTo0KG7HYHU7eppKZj3MyqYuMBf62g==}
     engines: {node: '>= 8'}
@@ -4496,6 +4505,10 @@ packages:
       abab: 2.0.6
       whatwg-mimetype: 2.3.0
       whatwg-url: 8.7.0
+    dev: true
+
+  /dayjs@1.11.10:
+    resolution: {integrity: sha512-vjAczensTgRcqDERK0SR2XMwsF/tSvnvlv6VcF2GIhg6Sx4yOIt/irsr1RDJsKiIyBzJDpCoXiWWq28MqH2cnQ==}
     dev: true
 
   /de-indent@1.0.2:
@@ -7477,6 +7490,19 @@ packages:
     resolution: {integrity: sha512-gptHNQghINnc/vTGIk0SOFGFNXw7JVrlRUtConJRlvaw6DuX0wO5Jeko9sWrMBhh+PsYAZ7oXAiOnf/UKogyiw==}
     engines: {node: '>= 10.0.0'}
 
+  /unocss-preset-weapp@0.58.0:
+    resolution: {integrity: sha512-ezpL0TKGz9W7OeLELqV+Iu4nT8ze1J1NYO6ZYOLpZYZ+2frA5vBqI7vXZy2M7UAlPG0DWIh0oneKZ8qBOO7Krg==}
+    dependencies:
+      '@rollup/pluginutils': 5.1.0
+      '@unocss/core': 0.58.3
+      '@unocss/extractor-arbitrary-variants': 0.58.3
+      '@unocss/rule-utils': 0.58.3
+      unplugin-attributify-to-class: 0.2.5
+      unplugin-transform-class: 0.5.1
+    transitivePeerDependencies:
+      - rollup
+    dev: true
+
   /unocss@0.58.3(postcss@8.4.33)(vite@4.0.3):
     resolution: {integrity: sha512-2rnvghfiIDRQ2cOrmN4P7J7xV2p3yBK+bPAt1aoUxCXcszkLczAnQzh9c7IZ+p70kSVstK45cJTYV6TMzOLF7Q==}
     engines: {node: '>=14'}
@@ -7519,6 +7545,16 @@ packages:
   /unpipe@1.0.0:
     resolution: {integrity: sha512-pjy2bYhSsufwWlKwPc+l3cN7+wuJlK6uz0YdJEOlQDbl6jo/YlPi4mb8agUkVC8BF7V8NuzeyPNqRksA3hztKQ==}
     engines: {node: '>= 0.8'}
+    dev: true
+
+  /unplugin-attributify-to-class@0.2.5:
+    resolution: {integrity: sha512-0lTUi01mI19PmTTX4420QO6gJFic1wK4LqNnHeBNDrthQEKI0xw/lYg0bGnWYgPmyqXz88hAdLG+ibaypibXqg==}
+    dependencies:
+      '@rollup/pluginutils': 5.1.0
+      unplugin: 1.6.0
+      unplugin-transform-class: 0.5.1
+    transitivePeerDependencies:
+      - rollup
     dev: true
 
   /unplugin-auto-import@0.16.7:
@@ -7566,6 +7602,25 @@ packages:
       unplugin: 1.6.0
     transitivePeerDependencies:
       - rollup
+    dev: true
+
+  /unplugin-transform-class@0.5.1:
+    resolution: {integrity: sha512-v3TvmVFsosuq6GXyelcr1lPsgDVcAQiWE7NA6JezVjUUdiSjDvnZYQf8x6hCm1+Ouh5dg3QvCZ57o8la/svDNA==}
+    dependencies:
+      '@meoc/utils': 0.2.8
+      '@rollup/pluginutils': 5.1.0
+      unplugin: 1.4.0
+    transitivePeerDependencies:
+      - rollup
+    dev: true
+
+  /unplugin@1.4.0:
+    resolution: {integrity: sha512-5x4eIEL6WgbzqGtF9UV8VEC/ehKptPXDS6L2b0mv4FRMkJxRtjaJfOWDd6a8+kYbqsjklix7yWP0N3SUepjXcg==}
+    dependencies:
+      acorn: 8.11.3
+      chokidar: 3.5.3
+      webpack-sources: 3.2.3
+      webpack-virtual-modules: 0.5.0
     dev: true
 
   /unplugin@1.6.0:
@@ -7787,6 +7842,10 @@ packages:
   /webpack-sources@3.2.3:
     resolution: {integrity: sha512-/DyMEOrDgLKKIG0fmvtz+4dUX/3Ghozwgm6iPp8KRhvn+eQf9+Q7GWxVNMk3+uCPWfdXYC4ExGBckIXdFEfH1w==}
     engines: {node: '>=10.13.0'}
+
+  /webpack-virtual-modules@0.5.0:
+    resolution: {integrity: sha512-kyDivFZ7ZM0BVOUteVbDFhlRt7Ah/CSPwJdi8hBpkK7QLumUqdLtVfm/PX/hkcnrvr0i77fO5+TjZ94Pe+C9iw==}
+    dev: true
 
   /webpack-virtual-modules@0.6.1:
     resolution: {integrity: sha512-poXpCylU7ExuvZK8z+On3kX+S8o/2dQ/SVYueKA0D4WEMXROXgY8Ez50/bQEUmvoSMMrWcrJqCHuhAbsiwg7Dg==}

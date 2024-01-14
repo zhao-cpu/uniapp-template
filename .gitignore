@@ -21,3 +21,4 @@ dist
 *.sw?
 
 src/types/auto-imports.d.ts
+.hbuilderx

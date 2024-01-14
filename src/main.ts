@@ -2,7 +2,7 @@ import { createSSRApp } from 'vue';
 import * as Pinia from 'pinia';
 import piniaPluginPersistedstate from 'pinia-plugin-persistedstate';
 import App from './App.vue';
-import 'virtual:uno.css';
+import 'uno.css';
 
 const pinia = Pinia.createPinia();
 pinia.use(piniaPluginPersistedstate);

@@ -1,15 +1,20 @@
-import { defineConfig } from 'unocss';
-import { presetWind } from 'unocss';
-import transformerDirectives from '@unocss/transformer-directives';
-export default defineConfig({
-  shortcuts: {},
+import presetWeapp from 'unocss-preset-weapp';
+import { extractorAttributify, transformerClass } from 'unocss-preset-weapp/transformer';
+
+const { presetWeappAttributify, transformerAttributify } = extractorAttributify();
+export default {
+  presets: [presetWeapp(), presetWeappAttributify()],
+  shortcuts: [
+    {
+      'border-base': 'border border-gray-500_10',
+      center: 'flex justify-center items-center',
+    },
+  ],
   theme: {
     colors: {
       primary: '#186ffc',
     },
   },
-  rules: [],
-  variants: [],
-  transformers: [transformerDirectives()],
-  presets: [presetWind()],
-});
+
+  transformers: [transformerAttributify(), transformerClass()],
+};
