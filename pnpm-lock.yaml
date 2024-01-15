@@ -97,6 +97,9 @@ devDependencies:
   '@dcloudio/vite-plugin-uni':
     specifier: 3.0.0-3090920231225001
     version: 3.0.0-3090920231225001(postcss@8.4.33)(vite@4.0.3)(vue@3.4.7)
+  '@types/uni-app':
+    specifier: ^1.4.8
+    version: 1.4.8
   '@types/wechat-miniprogram':
     specifier: ^3.4.7
     version: 3.4.7
@@ -3234,6 +3237,12 @@ packages:
     resolution: {integrity: sha512-9aEbYZ3TbYMznPdcdr3SmIrLXwC/AKZXQeCf9Pgao5CKb8CyHuEX5jzWPTkvregvhRJHcpRO6BFoGW9ycaOkYw==}
     dev: true
 
+  /@types/uni-app@1.4.8:
+    resolution: {integrity: sha512-plxwi9MvGDrekCsDKuNlCN3ZXIv9zkqHsKZJOsc8FQqLSHveDBOm11qOaswe4QyNWVHpvwZMViii/Ni1/d40LA==}
+    dependencies:
+      vue: 2.7.16
+    dev: true
+
   /@types/wechat-miniprogram@3.4.7:
     resolution: {integrity: sha512-X6SVOOaTPQN24lYBSV5jLuWyIedx8DGJnT0VUBnoNzJruhxotCL28ecGb7AO5JfXOXtHqSS5+CnJ70NxFxmisA==}
     dev: true
@@ -3722,6 +3731,16 @@ packages:
     dependencies:
       '@vue/compiler-core': 3.4.7
       '@vue/shared': 3.4.7
+
+  /@vue/compiler-sfc@2.7.16:
+    resolution: {integrity: sha512-KWhJ9k5nXuNtygPU7+t1rX6baZeqOYLEforUPjgNDBnLicfHCoi48H87Q8XyLZOrNNsmhuwKqtpDQWjEFe6Ekg==}
+    dependencies:
+      '@babel/parser': 7.23.6
+      postcss: 8.4.33
+      source-map: 0.6.1
+    optionalDependencies:
+      prettier: 2.8.8
+    dev: true
 
   /@vue/compiler-sfc@3.2.47:
     resolution: {integrity: sha512-rog05W+2IFfxjMcFw10tM9+f7i/+FFpZJJ5XHX72NP9eC2uRD+42M3pYcQqDXVYoj74kHMSEdQ/WmCjt8JFksQ==}
@@ -6808,6 +6827,14 @@ packages:
       fast-diff: 1.3.0
     dev: true
 
+  /prettier@2.8.8:
+    resolution: {integrity: sha512-tdN8qQGvNjw4CHbY+XXk0JgCXn9QiF21a55rBe5LJAU+kDyC4WQn4+awm2Xfk2lQMk5fKup9XgzTZtGkjBdP9Q==}
+    engines: {node: '>=10.13.0'}
+    hasBin: true
+    requiresBuild: true
+    dev: true
+    optional: true
+
   /prettier@3.2.0:
     resolution: {integrity: sha512-/vBUecTGaPlRVwyZVROVC58bYIScqaoEJzZmzQXXrZOzqn0TwWz0EnOozOlFO/YAImRnb7XsKpTCd3m1SjS2Ww==}
     engines: {node: '>=14'}
@@ -7792,6 +7819,14 @@ packages:
       '@vue/language-core': 1.8.27(typescript@4.9.5)
       semver: 7.5.4
       typescript: 4.9.5
+    dev: true
+
+  /vue@2.7.16:
+    resolution: {integrity: sha512-4gCtFXaAA3zYZdTp5s4Hl2sozuySsgz4jy1EnpBHNfpMa9dK1ZCG7viqBPCwXtmgc8nHqUsAu3G4gtmXkkY3Sw==}
+    deprecated: Vue 2 has reached EOL and is no longer actively maintained. See https://v2.vuejs.org/eol/ for more details.
+    dependencies:
+      '@vue/compiler-sfc': 2.7.16
+      csstype: 3.1.3
     dev: true
 
   /vue@3.4.7(typescript@4.9.5):
