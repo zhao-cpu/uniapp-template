@@ -3,7 +3,7 @@ import { BASE_URL } from '@/utils/config';
 const httpInterceptor = {
   invoke(options: UniApp.RequestOptions) {
     /** 拼接非 http 请求地址 */
-    if (!options.url.startsWith('http')) options.url = BASE_URL + options.url;
+    if (!options.url.startsWith('http')) options.url = import.meta.env.VITE_BASE_API + options.url;
     /** 请求超时时间 */
     options.timeout = 10 * 1000;
     /** 添加 token */
